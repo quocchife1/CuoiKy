@@ -26,7 +26,7 @@ namespace Pharmacy
         {
             DataBaseDataContext data = new DataBaseDataContext();
 
-            dgvManagerList.DataSource = data.EMPLOYEEs.Where(p => p.EMP_TYPE == "MANAGER").Select(p => new { p.EMP_ID, p.EMP_NAME, p.EMP_SEX, p.EMP_DATE_OF_BIRTH, p.EMP_TYPE, p.EMP_JOB_DATE, p.EMP_PHONE, p.EMP_MAIL, p.SUP_ADD }).OrderBy(p => p.EMP_ID); ;
+            dgvUpdateInfor.DataSource = data.EMPLOYEEs.Where(p => p.EMP_TYPE == "MANAGER").Select(p => new { p.EMP_ID, p.EMP_NAME, p.EMP_SEX, p.EMP_DATE_OF_BIRTH, p.EMP_TYPE, p.EMP_JOB_DATE, p.EMP_PHONE, p.EMP_MAIL, p.EMP_STORE }).OrderBy(p => p.EMP_ID);
         }
     }
 }

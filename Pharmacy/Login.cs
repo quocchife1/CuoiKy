@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Pharmacy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +19,14 @@ namespace Pharmacy
             InitializeComponent();
         }
 
+        public static string GlobalLoggedInUserName = "";
+        public static string GlobalLoggedInID = "";
+        public static string GlobalLoggedInStore = "";
+        public static string GlobalLoggedInType = "";
+
         private void Login_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
             LoadDuLieu();
         }
 
@@ -30,45 +38,98 @@ namespace Pharmacy
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string type = "MANAGER";
             string userName = txtUsername.Text;
             string passWord = txtPassword.Text;
+            DataBaseDataContext data = new DataBaseDataContext();
 
-
-            if (rbtnManager.Checked)
+            if (userName == "" || passWord == "")
             {
-                DataBaseDataContext data = new DataBaseDataContext();
+                MessageBox.Show("Vui lòng điền thông tin!", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                ACCOUNT acc = data.ACCOUNTs.SingleOrDefault(p => p.USERNAME == userName);
+                if (acc != null)
+                {
+                    if(acc.ACTIVE == false)
+                    {
+                        MessageBox.Show("Tài khoản chưa xác thực. Vui lòng nhập OTP để xác thực.", "Thông báo");
+                        XacThuc frm = new XacThuc(acc.USERNAME);
+                        frm.Show();
+                        return;
+                    }
 
-                ADMIN ad = data.ADMINs.Where(p => p.A_USERNAME == userName && p.A_PASSWORD == passWord).SingleOrDefault();
-                if (ad != null)
-                {
-                    Admin admin = new Admin();
-                    admin.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng !", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+                    MD5 md5 = MD5.Create();
+                    byte[] inputBytes = Encoding.ASCII.GetBytes(passWord + acc.RANDOMKEY);
+                    byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                    if (acc.PASSWORD == hashBytes)
+                    {
+                        EMPLOYEE emp = data.EMPLOYEEs.Where(p => p.EMP_ID == acc.ID).SingleOrDefault();
+                        Login.GlobalLoggedInType = acc.LEVEL;
+                        Login.GlobalLoggedInStore = emp.EMP_STORE;
+                        if (acc.LEVEL == "ADMIN")
+                        {
+                            
+                            
+                            if (emp != null)
+                            {
+                                string empID = emp.EMP_ID;
+                                string empName = emp.EMP_NAME;
+                                string empStore = emp.EMP_STORE;
+                                Login.GlobalLoggedInUserName = empName;
+                                Login.GlobalLoggedInID = empID;
+                                Login.GlobalLoggedInStore = empStore;
+                                
+                            }
+                        }
+                        else
+                        {
+                            if (acc.LEVEL == "MANAGER")
+                            {
+                                if (emp != null)
+                                {
+                                    string empID = emp.EMP_ID;
+                                    string empName = emp.EMP_NAME;
+                                    string empStore = emp.EMP_STORE;
+                                    Login.GlobalLoggedInUserName = empName;
+                                    Login.GlobalLoggedInID = empID;
+                                    Login.GlobalLoggedInStore = empStore;
+                                    
+                                }
+                            }
+                            else if (acc.LEVEL == "PHARMACIST")
+                            {
+                                if (emp != null)
+                                {
+                                    string empID = emp.EMP_ID;
+                                    string empName = emp.EMP_NAME;
+                                    string empStore = emp.EMP_STORE;
+                                    string type = emp.EMP_TYPE;
+                                    Login.GlobalLoggedInUserName = empName;
+                                    Login.GlobalLoggedInID = empID;
+                                    Login.GlobalLoggedInStore = empStore;
+                                    
+                                }
+                            }
+                            
+                            
+                        }
+                        MainForm ad = new MainForm();
+                        ad.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông tin không tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                        txtUsername.Focus();
+                    }
                 }
             }
-            if (rbtnEMP.Checked)
-            {
-                DataBaseDataContext data = new DataBaseDataContext();
 
-                EMPACCOUNT ad = data.EMPACCOUNTs.Where(p => p.EMPAC_USERNAME == userName && p.EMPAC_PASSWORD == passWord).SingleOrDefault();
-                if (ad != null)
-                {
-                    Admin admin = new Admin();
-                    admin.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
 
-            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -78,7 +139,7 @@ namespace Pharmacy
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            if(txtPassword.PasswordChar == '•')
+            if (txtPassword.PasswordChar == '•')
             {
                 btnHide.BringToFront();
                 txtPassword.PasswordChar = '\0';
@@ -109,5 +170,36 @@ namespace Pharmacy
         {
             this.Cursor = Cursors.Default;
         }
+        private void getID(string loggedInID)
+        {
+            var reportForm = new reportCheckGoodsPrinter();
+            var reportFormB = new reportBillPrinter();
+            reportForm.LoggedInID = loggedInID;
+            reportFormB.LoggedInID = loggedInID;
+        }
+
+        private void getStore(string loggedInStore)
+        {
+            var reporrtFormB = new reportBillPrinter();
+            reporrtFormB.LoggedInStore = loggedInStore;
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void forgotPassWord_Click(object sender, EventArgs e)
+        {
+            ForgotPassword fgpw = new ForgotPassword();
+            fgpw.Show();
+            this.Hide();
+        }
     }
 }
+

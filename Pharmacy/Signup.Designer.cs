@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.lblLinkLogin = new System.Windows.Forms.Label();
-            this.rbtnEMP = new System.Windows.Forms.RadioButton();
-            this.rbtnManager = new System.Windows.Forms.RadioButton();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSignup = new System.Windows.Forms.Button();
@@ -44,16 +42,20 @@
             this.lblAskLG = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtEMP_ID = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.picConfirmPass = new System.Windows.Forms.PictureBox();
             this.picPass = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picConfirmPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -72,40 +74,13 @@
             this.lblLinkLogin.MouseLeave += new System.EventHandler(this.lblLinkLogin_MouseLeave);
             this.lblLinkLogin.MouseHover += new System.EventHandler(this.lblLinkLogin_MouseHover);
             // 
-            // rbtnEMP
-            // 
-            this.rbtnEMP.AutoSize = true;
-            this.rbtnEMP.Checked = true;
-            this.rbtnEMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnEMP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.rbtnEMP.Location = new System.Drawing.Point(243, 213);
-            this.rbtnEMP.Name = "rbtnEMP";
-            this.rbtnEMP.Size = new System.Drawing.Size(94, 20);
-            this.rbtnEMP.TabIndex = 22;
-            this.rbtnEMP.TabStop = true;
-            this.rbtnEMP.Text = "Nhân viên";
-            this.rbtnEMP.UseVisualStyleBackColor = true;
-            // 
-            // rbtnManager
-            // 
-            this.rbtnManager.AutoSize = true;
-            this.rbtnManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnManager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.rbtnManager.Location = new System.Drawing.Point(96, 213);
-            this.rbtnManager.Name = "rbtnManager";
-            this.rbtnManager.Size = new System.Drawing.Size(77, 20);
-            this.rbtnManager.TabIndex = 21;
-            this.rbtnManager.TabStop = true;
-            this.rbtnManager.Text = "Quản lý";
-            this.rbtnManager.UseVisualStyleBackColor = true;
-            // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.SystemColors.Window;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txtUsername.Location = new System.Drawing.Point(96, 337);
+            this.txtUsername.Location = new System.Drawing.Point(103, 354);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(263, 22);
@@ -147,7 +122,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(44, 372);
+            this.panel1.Location = new System.Drawing.Point(51, 389);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 1);
@@ -181,7 +156,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(45, 540);
+            this.panel3.Location = new System.Drawing.Point(52, 529);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(315, 1);
@@ -192,7 +167,7 @@
             this.txtConfirmpPassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmpPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmpPassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txtConfirmpPassWord.Location = new System.Drawing.Point(97, 506);
+            this.txtConfirmpPassWord.Location = new System.Drawing.Point(104, 495);
             this.txtConfirmpPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtConfirmpPassWord.Name = "txtConfirmpPassWord";
             this.txtConfirmpPassWord.PasswordChar = '•';
@@ -203,7 +178,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(43, 456);
+            this.panel2.Location = new System.Drawing.Point(51, 456);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 1);
@@ -214,7 +189,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txtPassword.Location = new System.Drawing.Point(95, 422);
+            this.txtPassword.Location = new System.Drawing.Point(103, 422);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
@@ -236,7 +211,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(43, 292);
+            this.panel4.Location = new System.Drawing.Point(52, 229);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(315, 1);
@@ -248,11 +223,33 @@
             this.txtEMP_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEMP_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMP_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txtEMP_ID.Location = new System.Drawing.Point(95, 257);
+            this.txtEMP_ID.Location = new System.Drawing.Point(104, 194);
             this.txtEMP_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEMP_ID.Name = "txtEMP_ID";
             this.txtEMP_ID.Size = new System.Drawing.Size(263, 22);
             this.txtEMP_ID.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(52, 312);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(315, 1);
+            this.panel5.TabIndex = 16;
+            // 
+            // txtMail
+            // 
+            this.txtMail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.txtMail.Location = new System.Drawing.Point(104, 277);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(263, 22);
+            this.txtMail.TabIndex = 0;
             // 
             // btnShow
             // 
@@ -260,7 +257,7 @@
             this.btnShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnShow.FlatAppearance.BorderSize = 0;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShow.Location = new System.Drawing.Point(326, 502);
+            this.btnShow.Location = new System.Drawing.Point(333, 491);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(33, 31);
             this.btnShow.TabIndex = 24;
@@ -273,7 +270,7 @@
             this.btnHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnHide.FlatAppearance.BorderSize = 0;
             this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHide.Location = new System.Drawing.Point(326, 506);
+            this.btnHide.Location = new System.Drawing.Point(333, 495);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(33, 31);
             this.btnHide.TabIndex = 23;
@@ -283,7 +280,7 @@
             // picConfirmPass
             // 
             this.picConfirmPass.Image = global::Pharmacy.Properties.Resources.ConfirmPassword;
-            this.picConfirmPass.Location = new System.Drawing.Point(45, 502);
+            this.picConfirmPass.Location = new System.Drawing.Point(52, 491);
             this.picConfirmPass.Margin = new System.Windows.Forms.Padding(4);
             this.picConfirmPass.Name = "picConfirmPass";
             this.picConfirmPass.Size = new System.Drawing.Size(33, 31);
@@ -294,7 +291,7 @@
             // picPass
             // 
             this.picPass.Image = global::Pharmacy.Properties.Resources.password_76_32;
-            this.picPass.Location = new System.Drawing.Point(43, 418);
+            this.picPass.Location = new System.Drawing.Point(51, 418);
             this.picPass.Margin = new System.Windows.Forms.Padding(4);
             this.picPass.Name = "picPass";
             this.picPass.Size = new System.Drawing.Size(33, 31);
@@ -305,7 +302,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pharmacy.Properties.Resources.ID;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 254);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 191);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
@@ -313,10 +310,21 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Pharmacy.Properties.Resources.mail;
+            this.pictureBox2.Location = new System.Drawing.Point(52, 274);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
             // picUser
             // 
             this.picUser.Image = global::Pharmacy.Properties.Resources.User;
-            this.picUser.Location = new System.Drawing.Point(44, 334);
+            this.picUser.Location = new System.Drawing.Point(51, 351);
             this.picUser.Margin = new System.Windows.Forms.Padding(4);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(33, 31);
@@ -344,11 +352,10 @@
             this.Controls.Add(this.lblLinkLogin);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnHide);
-            this.Controls.Add(this.rbtnEMP);
-            this.Controls.Add(this.rbtnManager);
             this.Controls.Add(this.txtConfirmpPassWord);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEMP_ID);
+            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel3);
@@ -357,7 +364,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.picPass);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.lblBrand);
@@ -371,6 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picConfirmPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
@@ -381,8 +391,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblLinkLogin;
-        private System.Windows.Forms.RadioButton rbtnEMP;
-        private System.Windows.Forms.RadioButton rbtnManager;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSignup;
@@ -403,5 +411,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtEMP_ID;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox txtMail;
     }
 }

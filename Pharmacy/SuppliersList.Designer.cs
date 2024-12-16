@@ -47,7 +47,7 @@
             this.lblSuppliersList.AutoSize = true;
             this.lblSuppliersList.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSuppliersList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.lblSuppliersList.Location = new System.Drawing.Point(194, 43);
+            this.lblSuppliersList.Location = new System.Drawing.Point(244, 43);
             this.lblSuppliersList.Name = "lblSuppliersList";
             this.lblSuppliersList.Size = new System.Drawing.Size(415, 34);
             this.lblSuppliersList.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.dgvSuppliersList.RowTemplate.DividerHeight = 1;
             this.dgvSuppliersList.RowTemplate.Height = 30;
             this.dgvSuppliersList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSuppliersList.Size = new System.Drawing.Size(710, 503);
+            this.dgvSuppliersList.Size = new System.Drawing.Size(810, 653);
             this.dgvSuppliersList.TabIndex = 4;
             // 
             // SUP_ID
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.ClientSize = new System.Drawing.Size(834, 761);
             this.Controls.Add(this.lblSuppliersList);
             this.Controls.Add(this.dgvSuppliersList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

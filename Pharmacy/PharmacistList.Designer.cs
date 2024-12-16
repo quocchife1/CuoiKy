@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPharmacistList = new System.Windows.Forms.DataGridView();
-            this.lblPharmacistList = new System.Windows.Forms.Label();
             this.EMP_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMP_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMP_SEX = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,8 +40,8 @@
             this.EMP_JOB_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMP_PHONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EMP_MAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUP_ADD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.EMP_STORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPharmacistList = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPharmacistList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +77,7 @@
             this.EMP_JOB_DATE,
             this.EMP_PHONE,
             this.EMP_MAIL,
-            this.SUP_ADD});
+            this.EMP_STORE});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,20 +105,8 @@
             this.dgvPharmacistList.RowTemplate.DividerHeight = 1;
             this.dgvPharmacistList.RowTemplate.Height = 30;
             this.dgvPharmacistList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPharmacistList.Size = new System.Drawing.Size(710, 503);
+            this.dgvPharmacistList.Size = new System.Drawing.Size(810, 653);
             this.dgvPharmacistList.TabIndex = 0;
-            // 
-            // lblPharmacistList
-            // 
-            this.lblPharmacistList.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPharmacistList.AutoSize = true;
-            this.lblPharmacistList.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPharmacistList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.lblPharmacistList.Location = new System.Drawing.Point(186, 43);
-            this.lblPharmacistList.Name = "lblPharmacistList";
-            this.lblPharmacistList.Size = new System.Drawing.Size(350, 34);
-            this.lblPharmacistList.TabIndex = 1;
-            this.lblPharmacistList.Text = "DANH SÁCH NHÂN VIÊN";
             // 
             // EMP_ID
             // 
@@ -185,27 +172,31 @@
             this.EMP_MAIL.Name = "EMP_MAIL";
             this.EMP_MAIL.ReadOnly = true;
             // 
-            // SUP_ADD
+            // EMP_STORE
             // 
-            this.SUP_ADD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SUP_ADD.DataPropertyName = "SUP_ADD";
-            this.SUP_ADD.HeaderText = "Cửa hàng";
-            this.SUP_ADD.Name = "SUP_ADD";
-            this.SUP_ADD.ReadOnly = true;
+            this.EMP_STORE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EMP_STORE.DataPropertyName = "EMP_STORE";
+            this.EMP_STORE.HeaderText = "Cửa hàng";
+            this.EMP_STORE.Name = "EMP_STORE";
+            this.EMP_STORE.ReadOnly = true;
             // 
-            // txtSearch
+            // lblPharmacistList
             // 
-            this.txtSearch.Location = new System.Drawing.Point(578, 70);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(144, 20);
-            this.txtSearch.TabIndex = 2;
+            this.lblPharmacistList.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPharmacistList.AutoSize = true;
+            this.lblPharmacistList.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPharmacistList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.lblPharmacistList.Location = new System.Drawing.Point(236, 43);
+            this.lblPharmacistList.Name = "lblPharmacistList";
+            this.lblPharmacistList.Size = new System.Drawing.Size(350, 34);
+            this.lblPharmacistList.TabIndex = 1;
+            this.lblPharmacistList.Text = "DANH SÁCH NHÂN VIÊN";
             // 
             // PharmacistList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(734, 611);
-            this.Controls.Add(this.txtSearch);
+            this.ClientSize = new System.Drawing.Size(834, 761);
             this.Controls.Add(this.lblPharmacistList);
             this.Controls.Add(this.dgvPharmacistList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,7 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EMP_JOB_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn EMP_PHONE;
         private System.Windows.Forms.DataGridViewTextBoxColumn EMP_MAIL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUP_ADD;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMP_STORE;
     }
 }

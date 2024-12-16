@@ -30,18 +30,15 @@ namespace Pharmacy
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertADMIN(ADMIN instance);
-    partial void UpdateADMIN(ADMIN instance);
-    partial void DeleteADMIN(ADMIN instance);
     partial void InsertCUSTOMER(CUSTOMER instance);
     partial void UpdateCUSTOMER(CUSTOMER instance);
     partial void DeleteCUSTOMER(CUSTOMER instance);
-    partial void InsertEMPACCOUNT(EMPACCOUNT instance);
-    partial void UpdateEMPACCOUNT(EMPACCOUNT instance);
-    partial void DeleteEMPACCOUNT(EMPACCOUNT instance);
     partial void InsertEMPLOYEE(EMPLOYEE instance);
     partial void UpdateEMPLOYEE(EMPLOYEE instance);
     partial void DeleteEMPLOYEE(EMPLOYEE instance);
+    partial void InsertMED_REQ(MED_REQ instance);
+    partial void UpdateMED_REQ(MED_REQ instance);
+    partial void DeleteMED_REQ(MED_REQ instance);
     partial void InsertMEDICINE(MEDICINE instance);
     partial void UpdateMEDICINE(MEDICINE instance);
     partial void DeleteMEDICINE(MEDICINE instance);
@@ -57,10 +54,16 @@ namespace Pharmacy
     partial void InsertSUPPLIER(SUPPLIER instance);
     partial void UpdateSUPPLIER(SUPPLIER instance);
     partial void DeleteSUPPLIER(SUPPLIER instance);
+    partial void InsertACCOUNT(ACCOUNT instance);
+    partial void UpdateACCOUNT(ACCOUNT instance);
+    partial void DeleteACCOUNT(ACCOUNT instance);
+    partial void InsertBILL(BILL instance);
+    partial void UpdateBILL(BILL instance);
+    partial void DeleteBILL(BILL instance);
     #endregion
 		
 		public DataBaseDataContext() : 
-				base(global::Pharmacy.Properties.Settings.Default.PHARMACYConnectionString, mappingSource)
+				base(global::Pharmacy.Properties.Settings.Default.PHARMACYConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -89,14 +92,6 @@ namespace Pharmacy
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ADMIN> ADMINs
-		{
-			get
-			{
-				return this.GetTable<ADMIN>();
-			}
-		}
-		
 		public System.Data.Linq.Table<CUSTOMER> CUSTOMERs
 		{
 			get
@@ -105,19 +100,19 @@ namespace Pharmacy
 			}
 		}
 		
-		public System.Data.Linq.Table<EMPACCOUNT> EMPACCOUNTs
-		{
-			get
-			{
-				return this.GetTable<EMPACCOUNT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<EMPLOYEE> EMPLOYEEs
 		{
 			get
 			{
 				return this.GetTable<EMPLOYEE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MED_REQ> MED_REQs
+		{
+			get
+			{
+				return this.GetTable<MED_REQ>();
 			}
 		}
 		
@@ -160,155 +155,20 @@ namespace Pharmacy
 				return this.GetTable<SUPPLIER>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ADMIN")]
-	public partial class ADMIN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _A_ID;
-		
-		private string _A_USERNAME;
-		
-		private string _A_PASSWORD;
-		
-		private EntityRef<EMPLOYEE> _EMPLOYEE;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnA_IDChanging(string value);
-    partial void OnA_IDChanged();
-    partial void OnA_USERNAMEChanging(string value);
-    partial void OnA_USERNAMEChanged();
-    partial void OnA_PASSWORDChanging(string value);
-    partial void OnA_PASSWORDChanged();
-    #endregion
-		
-		public ADMIN()
-		{
-			this._EMPLOYEE = default(EntityRef<EMPLOYEE>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_A_ID", DbType="VarChar(10)")]
-		public string A_ID
+		public System.Data.Linq.Table<ACCOUNT> ACCOUNTs
 		{
 			get
 			{
-				return this._A_ID;
-			}
-			set
-			{
-				if ((this._A_ID != value))
-				{
-					if (this._EMPLOYEE.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnA_IDChanging(value);
-					this.SendPropertyChanging();
-					this._A_ID = value;
-					this.SendPropertyChanged("A_ID");
-					this.OnA_IDChanged();
-				}
+				return this.GetTable<ACCOUNT>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_A_USERNAME", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string A_USERNAME
+		public System.Data.Linq.Table<BILL> BILLs
 		{
 			get
 			{
-				return this._A_USERNAME;
-			}
-			set
-			{
-				if ((this._A_USERNAME != value))
-				{
-					this.OnA_USERNAMEChanging(value);
-					this.SendPropertyChanging();
-					this._A_USERNAME = value;
-					this.SendPropertyChanged("A_USERNAME");
-					this.OnA_USERNAMEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_A_PASSWORD", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string A_PASSWORD
-		{
-			get
-			{
-				return this._A_PASSWORD;
-			}
-			set
-			{
-				if ((this._A_PASSWORD != value))
-				{
-					this.OnA_PASSWORDChanging(value);
-					this.SendPropertyChanging();
-					this._A_PASSWORD = value;
-					this.SendPropertyChanged("A_PASSWORD");
-					this.OnA_PASSWORDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="EMPLOYEE_ADMIN", Storage="_EMPLOYEE", ThisKey="A_ID", OtherKey="EMP_ID", IsForeignKey=true)]
-		public EMPLOYEE EMPLOYEE
-		{
-			get
-			{
-				return this._EMPLOYEE.Entity;
-			}
-			set
-			{
-				EMPLOYEE previousValue = this._EMPLOYEE.Entity;
-				if (((previousValue != value) 
-							|| (this._EMPLOYEE.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._EMPLOYEE.Entity = null;
-						previousValue.ADMINs.Remove(this);
-					}
-					this._EMPLOYEE.Entity = value;
-					if ((value != null))
-					{
-						value.ADMINs.Add(this);
-						this._A_ID = value.EMP_ID;
-					}
-					else
-					{
-						this._A_ID = default(string);
-					}
-					this.SendPropertyChanged("EMPLOYEE");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<BILL>();
 			}
 		}
 	}
@@ -523,157 +383,6 @@ namespace Pharmacy
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.EMPACCOUNT")]
-	public partial class EMPACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EMPAC_ID;
-		
-		private string _EMPAC_USERNAME;
-		
-		private string _EMPAC_PASSWORD;
-		
-		private EntityRef<EMPLOYEE> _EMPLOYEE;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEMPAC_IDChanging(string value);
-    partial void OnEMPAC_IDChanged();
-    partial void OnEMPAC_USERNAMEChanging(string value);
-    partial void OnEMPAC_USERNAMEChanged();
-    partial void OnEMPAC_PASSWORDChanging(string value);
-    partial void OnEMPAC_PASSWORDChanged();
-    #endregion
-		
-		public EMPACCOUNT()
-		{
-			this._EMPLOYEE = default(EntityRef<EMPLOYEE>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMPAC_ID", DbType="VarChar(10)")]
-		public string EMPAC_ID
-		{
-			get
-			{
-				return this._EMPAC_ID;
-			}
-			set
-			{
-				if ((this._EMPAC_ID != value))
-				{
-					if (this._EMPLOYEE.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnEMPAC_IDChanging(value);
-					this.SendPropertyChanging();
-					this._EMPAC_ID = value;
-					this.SendPropertyChanged("EMPAC_ID");
-					this.OnEMPAC_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMPAC_USERNAME", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EMPAC_USERNAME
-		{
-			get
-			{
-				return this._EMPAC_USERNAME;
-			}
-			set
-			{
-				if ((this._EMPAC_USERNAME != value))
-				{
-					this.OnEMPAC_USERNAMEChanging(value);
-					this.SendPropertyChanging();
-					this._EMPAC_USERNAME = value;
-					this.SendPropertyChanged("EMPAC_USERNAME");
-					this.OnEMPAC_USERNAMEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMPAC_PASSWORD", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string EMPAC_PASSWORD
-		{
-			get
-			{
-				return this._EMPAC_PASSWORD;
-			}
-			set
-			{
-				if ((this._EMPAC_PASSWORD != value))
-				{
-					this.OnEMPAC_PASSWORDChanging(value);
-					this.SendPropertyChanging();
-					this._EMPAC_PASSWORD = value;
-					this.SendPropertyChanged("EMPAC_PASSWORD");
-					this.OnEMPAC_PASSWORDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="EMPLOYEE_EMPACCOUNT", Storage="_EMPLOYEE", ThisKey="EMPAC_ID", OtherKey="EMP_ID", IsForeignKey=true)]
-		public EMPLOYEE EMPLOYEE
-		{
-			get
-			{
-				return this._EMPLOYEE.Entity;
-			}
-			set
-			{
-				EMPLOYEE previousValue = this._EMPLOYEE.Entity;
-				if (((previousValue != value) 
-							|| (this._EMPLOYEE.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._EMPLOYEE.Entity = null;
-						previousValue.EMPACCOUNTs.Remove(this);
-					}
-					this._EMPLOYEE.Entity = value;
-					if ((value != null))
-					{
-						value.EMPACCOUNTs.Add(this);
-						this._EMPAC_ID = value.EMP_ID;
-					}
-					else
-					{
-						this._EMPAC_ID = default(string);
-					}
-					this.SendPropertyChanged("EMPLOYEE");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.EMPLOYEE")]
 	public partial class EMPLOYEE : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -696,11 +405,7 @@ namespace Pharmacy
 		
 		private string _EMP_MAIL;
 		
-		private string _SUP_ADD;
-		
-		private EntitySet<ADMIN> _ADMINs;
-		
-		private EntitySet<EMPACCOUNT> _EMPACCOUNTs;
+		private string _EMP_STORE;
 		
 		private EntitySet<SALE> _SALEs;
 		
@@ -726,14 +431,12 @@ namespace Pharmacy
     partial void OnEMP_PHONEChanged();
     partial void OnEMP_MAILChanging(string value);
     partial void OnEMP_MAILChanged();
-    partial void OnSUP_ADDChanging(string value);
-    partial void OnSUP_ADDChanged();
+    partial void OnEMP_STOREChanging(string value);
+    partial void OnEMP_STOREChanged();
     #endregion
 		
 		public EMPLOYEE()
 		{
-			this._ADMINs = new EntitySet<ADMIN>(new Action<ADMIN>(this.attach_ADMINs), new Action<ADMIN>(this.detach_ADMINs));
-			this._EMPACCOUNTs = new EntitySet<EMPACCOUNT>(new Action<EMPACCOUNT>(this.attach_EMPACCOUNTs), new Action<EMPACCOUNT>(this.detach_EMPACCOUNTs));
 			this._SALEs = new EntitySet<SALE>(new Action<SALE>(this.attach_SALEs), new Action<SALE>(this.detach_SALEs));
 			this._SUPPLIER = default(EntityRef<SUPPLIER>);
 			OnCreated();
@@ -899,53 +602,27 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUP_ADD", DbType="NVarChar(50)")]
-		public string SUP_ADD
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMP_STORE", DbType="NVarChar(50)")]
+		public string EMP_STORE
 		{
 			get
 			{
-				return this._SUP_ADD;
+				return this._EMP_STORE;
 			}
 			set
 			{
-				if ((this._SUP_ADD != value))
+				if ((this._EMP_STORE != value))
 				{
 					if (this._SUPPLIER.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.OnSUP_ADDChanging(value);
+					this.OnEMP_STOREChanging(value);
 					this.SendPropertyChanging();
-					this._SUP_ADD = value;
-					this.SendPropertyChanged("SUP_ADD");
-					this.OnSUP_ADDChanged();
+					this._EMP_STORE = value;
+					this.SendPropertyChanged("EMP_STORE");
+					this.OnEMP_STOREChanged();
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="EMPLOYEE_ADMIN", Storage="_ADMINs", ThisKey="EMP_ID", OtherKey="A_ID")]
-		public EntitySet<ADMIN> ADMINs
-		{
-			get
-			{
-				return this._ADMINs;
-			}
-			set
-			{
-				this._ADMINs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="EMPLOYEE_EMPACCOUNT", Storage="_EMPACCOUNTs", ThisKey="EMP_ID", OtherKey="EMPAC_ID")]
-		public EntitySet<EMPACCOUNT> EMPACCOUNTs
-		{
-			get
-			{
-				return this._EMPACCOUNTs;
-			}
-			set
-			{
-				this._EMPACCOUNTs.Assign(value);
 			}
 		}
 		
@@ -962,7 +639,7 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SUPPLIER_EMPLOYEE", Storage="_SUPPLIER", ThisKey="SUP_ADD", OtherKey="SUP_ADD", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SUPPLIER_EMPLOYEE", Storage="_SUPPLIER", ThisKey="EMP_STORE", OtherKey="SUP_ADD", IsForeignKey=true)]
 		public SUPPLIER SUPPLIER
 		{
 			get
@@ -985,11 +662,11 @@ namespace Pharmacy
 					if ((value != null))
 					{
 						value.EMPLOYEEs.Add(this);
-						this._SUP_ADD = value.SUP_ADD;
+						this._EMP_STORE = value.SUP_ADD;
 					}
 					else
 					{
-						this._SUP_ADD = default(string);
+						this._EMP_STORE = default(string);
 					}
 					this.SendPropertyChanged("SUPPLIER");
 				}
@@ -1016,30 +693,6 @@ namespace Pharmacy
 			}
 		}
 		
-		private void attach_ADMINs(ADMIN entity)
-		{
-			this.SendPropertyChanging();
-			entity.EMPLOYEE = this;
-		}
-		
-		private void detach_ADMINs(ADMIN entity)
-		{
-			this.SendPropertyChanging();
-			entity.EMPLOYEE = null;
-		}
-		
-		private void attach_EMPACCOUNTs(EMPACCOUNT entity)
-		{
-			this.SendPropertyChanging();
-			entity.EMPLOYEE = this;
-		}
-		
-		private void detach_EMPACCOUNTs(EMPACCOUNT entity)
-		{
-			this.SendPropertyChanging();
-			entity.EMPLOYEE = null;
-		}
-		
 		private void attach_SALEs(SALE entity)
 		{
 			this.SendPropertyChanging();
@@ -1053,15 +706,245 @@ namespace Pharmacy
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MED_REQ")]
+	public partial class MED_REQ : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MED_ID;
+		
+		private string _MED_NAME;
+		
+		private int _MED_QTY;
+		
+		private string _MED_UNIT;
+		
+		private decimal _MED_REQ_P;
+		
+		private string _SUP_ID;
+		
+		private System.DateTime _MED_REQ_D;
+		
+		private string _MED_REQ_STATUS;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMED_IDChanging(string value);
+    partial void OnMED_IDChanged();
+    partial void OnMED_NAMEChanging(string value);
+    partial void OnMED_NAMEChanged();
+    partial void OnMED_QTYChanging(int value);
+    partial void OnMED_QTYChanged();
+    partial void OnMED_UNITChanging(string value);
+    partial void OnMED_UNITChanged();
+    partial void OnMED_REQ_PChanging(decimal value);
+    partial void OnMED_REQ_PChanged();
+    partial void OnSUP_IDChanging(string value);
+    partial void OnSUP_IDChanged();
+    partial void OnMED_REQ_DChanging(System.DateTime value);
+    partial void OnMED_REQ_DChanged();
+    partial void OnMED_REQ_STATUSChanging(string value);
+    partial void OnMED_REQ_STATUSChanged();
+    #endregion
+		
+		public MED_REQ()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="VarChar(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MED_ID
+		{
+			get
+			{
+				return this._MED_ID;
+			}
+			set
+			{
+				if ((this._MED_ID != value))
+				{
+					this.OnMED_IDChanging(value);
+					this.SendPropertyChanging();
+					this._MED_ID = value;
+					this.SendPropertyChanged("MED_ID");
+					this.OnMED_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_NAME", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MED_NAME
+		{
+			get
+			{
+				return this._MED_NAME;
+			}
+			set
+			{
+				if ((this._MED_NAME != value))
+				{
+					this.OnMED_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._MED_NAME = value;
+					this.SendPropertyChanged("MED_NAME");
+					this.OnMED_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_QTY", DbType="Int NOT NULL")]
+		public int MED_QTY
+		{
+			get
+			{
+				return this._MED_QTY;
+			}
+			set
+			{
+				if ((this._MED_QTY != value))
+				{
+					this.OnMED_QTYChanging(value);
+					this.SendPropertyChanging();
+					this._MED_QTY = value;
+					this.SendPropertyChanged("MED_QTY");
+					this.OnMED_QTYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_UNIT", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string MED_UNIT
+		{
+			get
+			{
+				return this._MED_UNIT;
+			}
+			set
+			{
+				if ((this._MED_UNIT != value))
+				{
+					this.OnMED_UNITChanging(value);
+					this.SendPropertyChanging();
+					this._MED_UNIT = value;
+					this.SendPropertyChanged("MED_UNIT");
+					this.OnMED_UNITChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_REQ_P", DbType="Decimal(11,4) NOT NULL")]
+		public decimal MED_REQ_P
+		{
+			get
+			{
+				return this._MED_REQ_P;
+			}
+			set
+			{
+				if ((this._MED_REQ_P != value))
+				{
+					this.OnMED_REQ_PChanging(value);
+					this.SendPropertyChanging();
+					this._MED_REQ_P = value;
+					this.SendPropertyChanged("MED_REQ_P");
+					this.OnMED_REQ_PChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUP_ID", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
+		public string SUP_ID
+		{
+			get
+			{
+				return this._SUP_ID;
+			}
+			set
+			{
+				if ((this._SUP_ID != value))
+				{
+					this.OnSUP_IDChanging(value);
+					this.SendPropertyChanging();
+					this._SUP_ID = value;
+					this.SendPropertyChanged("SUP_ID");
+					this.OnSUP_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_REQ_D", DbType="Date NOT NULL")]
+		public System.DateTime MED_REQ_D
+		{
+			get
+			{
+				return this._MED_REQ_D;
+			}
+			set
+			{
+				if ((this._MED_REQ_D != value))
+				{
+					this.OnMED_REQ_DChanging(value);
+					this.SendPropertyChanging();
+					this._MED_REQ_D = value;
+					this.SendPropertyChanged("MED_REQ_D");
+					this.OnMED_REQ_DChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_REQ_STATUS", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string MED_REQ_STATUS
+		{
+			get
+			{
+				return this._MED_REQ_STATUS;
+			}
+			set
+			{
+				if ((this._MED_REQ_STATUS != value))
+				{
+					this.OnMED_REQ_STATUSChanging(value);
+					this.SendPropertyChanging();
+					this._MED_REQ_STATUS = value;
+					this.SendPropertyChanged("MED_REQ_STATUS");
+					this.OnMED_REQ_STATUSChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MEDICINES")]
 	public partial class MEDICINE : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private decimal _MED_BARCODE;
+		private string _MED_BARCODE;
 		
-		private decimal _MED_ID;
+		private string _MED_ID;
 		
 		private string _MED_NAME;
 		
@@ -1077,15 +960,13 @@ namespace Pharmacy
 		
 		private EntitySet<PURCHASE> _PURCHASEs;
 		
-		private EntitySet<SALES_ITEM> _SALES_ITEMs;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnMED_BARCODEChanging(decimal value);
+    partial void OnMED_BARCODEChanging(string value);
     partial void OnMED_BARCODEChanged();
-    partial void OnMED_IDChanging(decimal value);
+    partial void OnMED_IDChanging(string value);
     partial void OnMED_IDChanged();
     partial void OnMED_NAMEChanging(string value);
     partial void OnMED_NAMEChanged();
@@ -1104,12 +985,11 @@ namespace Pharmacy
 		public MEDICINE()
 		{
 			this._PURCHASEs = new EntitySet<PURCHASE>(new Action<PURCHASE>(this.attach_PURCHASEs), new Action<PURCHASE>(this.detach_PURCHASEs));
-			this._SALES_ITEMs = new EntitySet<SALES_ITEM>(new Action<SALES_ITEM>(this.attach_SALES_ITEMs), new Action<SALES_ITEM>(this.detach_SALES_ITEMs));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_BARCODE", DbType="Decimal(13,0) NOT NULL")]
-		public decimal MED_BARCODE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_BARCODE", DbType="Char(13) NOT NULL", CanBeNull=false)]
+		public string MED_BARCODE
 		{
 			get
 			{
@@ -1128,8 +1008,8 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="Decimal(6,0) NOT NULL", IsPrimaryKey=true)]
-		public decimal MED_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="VarChar(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MED_ID
 		{
 			get
 			{
@@ -1281,19 +1161,6 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MEDICINE_SALES_ITEM", Storage="_SALES_ITEMs", ThisKey="MED_ID", OtherKey="MED_ID")]
-		public EntitySet<SALES_ITEM> SALES_ITEMs
-		{
-			get
-			{
-				return this._SALES_ITEMs;
-			}
-			set
-			{
-				this._SALES_ITEMs.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1325,18 +1192,6 @@ namespace Pharmacy
 			this.SendPropertyChanging();
 			entity.MEDICINE = null;
 		}
-		
-		private void attach_SALES_ITEMs(SALES_ITEM entity)
-		{
-			this.SendPropertyChanging();
-			entity.MEDICINE = this;
-		}
-		
-		private void detach_SALES_ITEMs(SALES_ITEM entity)
-		{
-			this.SendPropertyChanging();
-			entity.MEDICINE = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PURCHASE")]
@@ -1345,11 +1200,11 @@ namespace Pharmacy
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private decimal _P_ID;
+		private string _P_ID;
 		
 		private string _SUP_ID;
 		
-		private decimal _MED_ID;
+		private string _MED_ID;
 		
 		private int _P_QTY;
 		
@@ -1359,9 +1214,9 @@ namespace Pharmacy
 		
 		private System.DateTime _PUR_DATE;
 		
-		private System.DateTime _MFG_DATE;
+		private System.Nullable<System.DateTime> _MFG_DATE;
 		
-		private System.DateTime _EXP_DATE;
+		private System.Nullable<System.DateTime> _EXP_DATE;
 		
 		private string _P_STATUS;
 		
@@ -1373,11 +1228,11 @@ namespace Pharmacy
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnP_IDChanging(decimal value);
+    partial void OnP_IDChanging(string value);
     partial void OnP_IDChanged();
     partial void OnSUP_IDChanging(string value);
     partial void OnSUP_IDChanged();
-    partial void OnMED_IDChanging(decimal value);
+    partial void OnMED_IDChanging(string value);
     partial void OnMED_IDChanged();
     partial void OnP_QTYChanging(int value);
     partial void OnP_QTYChanged();
@@ -1387,9 +1242,9 @@ namespace Pharmacy
     partial void OnP_COSTChanged();
     partial void OnPUR_DATEChanging(System.DateTime value);
     partial void OnPUR_DATEChanged();
-    partial void OnMFG_DATEChanging(System.DateTime value);
+    partial void OnMFG_DATEChanging(System.Nullable<System.DateTime> value);
     partial void OnMFG_DATEChanged();
-    partial void OnEXP_DATEChanging(System.DateTime value);
+    partial void OnEXP_DATEChanging(System.Nullable<System.DateTime> value);
     partial void OnEXP_DATEChanged();
     partial void OnP_STATUSChanging(string value);
     partial void OnP_STATUSChanged();
@@ -1402,8 +1257,8 @@ namespace Pharmacy
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P_ID", DbType="Decimal(6,0) NOT NULL", IsPrimaryKey=true)]
-		public decimal P_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_P_ID", DbType="Char(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string P_ID
 		{
 			get
 			{
@@ -1446,8 +1301,8 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="Decimal(6,0) NOT NULL", IsPrimaryKey=true)]
-		public decimal MED_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="VarChar(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MED_ID
 		{
 			get
 			{
@@ -1550,8 +1405,8 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MFG_DATE", DbType="Date NOT NULL")]
-		public System.DateTime MFG_DATE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MFG_DATE", DbType="Date")]
+		public System.Nullable<System.DateTime> MFG_DATE
 		{
 			get
 			{
@@ -1570,8 +1425,8 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXP_DATE", DbType="Date NOT NULL")]
-		public System.DateTime EXP_DATE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EXP_DATE", DbType="Date")]
+		public System.Nullable<System.DateTime> EXP_DATE
 		{
 			get
 			{
@@ -1637,7 +1492,7 @@ namespace Pharmacy
 					}
 					else
 					{
-						this._MED_ID = default(decimal);
+						this._MED_ID = default(string);
 					}
 					this.SendPropertyChanged("MEDICINE");
 				}
@@ -1999,7 +1854,7 @@ namespace Pharmacy
 		
 		private int _S_ID;
 		
-		private decimal _MED_ID;
+		private string _MED_NAME;
 		
 		private int _ST_QTY;
 		
@@ -2009,16 +1864,14 @@ namespace Pharmacy
 		
 		private EntityRef<SALE> _SALE;
 		
-		private EntityRef<MEDICINE> _MEDICINE;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnS_IDChanging(int value);
     partial void OnS_IDChanged();
-    partial void OnMED_IDChanging(decimal value);
-    partial void OnMED_IDChanged();
+    partial void OnMED_NAMEChanging(string value);
+    partial void OnMED_NAMEChanged();
     partial void OnST_QTYChanging(int value);
     partial void OnST_QTYChanged();
     partial void OnST_UNITChanging(string value);
@@ -2030,7 +1883,6 @@ namespace Pharmacy
 		public SALES_ITEM()
 		{
 			this._SALE = default(EntityRef<SALE>);
-			this._MEDICINE = default(EntityRef<MEDICINE>);
 			OnCreated();
 		}
 		
@@ -2058,26 +1910,22 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_ID", DbType="Decimal(6,0) NOT NULL", IsPrimaryKey=true)]
-		public decimal MED_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MED_NAME", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MED_NAME
 		{
 			get
 			{
-				return this._MED_ID;
+				return this._MED_NAME;
 			}
 			set
 			{
-				if ((this._MED_ID != value))
+				if ((this._MED_NAME != value))
 				{
-					if (this._MEDICINE.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMED_IDChanging(value);
+					this.OnMED_NAMEChanging(value);
 					this.SendPropertyChanging();
-					this._MED_ID = value;
-					this.SendPropertyChanged("MED_ID");
-					this.OnMED_IDChanged();
+					this._MED_NAME = value;
+					this.SendPropertyChanged("MED_NAME");
+					this.OnMED_NAMEChanged();
 				}
 			}
 		}
@@ -2172,40 +2020,6 @@ namespace Pharmacy
 						this._S_ID = default(int);
 					}
 					this.SendPropertyChanged("SALE");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MEDICINE_SALES_ITEM", Storage="_MEDICINE", ThisKey="MED_ID", OtherKey="MED_ID", IsForeignKey=true)]
-		public MEDICINE MEDICINE
-		{
-			get
-			{
-				return this._MEDICINE.Entity;
-			}
-			set
-			{
-				MEDICINE previousValue = this._MEDICINE.Entity;
-				if (((previousValue != value) 
-							|| (this._MEDICINE.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._MEDICINE.Entity = null;
-						previousValue.SALES_ITEMs.Remove(this);
-					}
-					this._MEDICINE.Entity = value;
-					if ((value != null))
-					{
-						value.SALES_ITEMs.Add(this);
-						this._MED_ID = value.MED_ID;
-					}
-					else
-					{
-						this._MED_ID = default(decimal);
-					}
-					this.SendPropertyChanged("MEDICINE");
 				}
 			}
 		}
@@ -2374,7 +2188,7 @@ namespace Pharmacy
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SUPPLIER_EMPLOYEE", Storage="_EMPLOYEEs", ThisKey="SUP_ADD", OtherKey="SUP_ADD")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SUPPLIER_EMPLOYEE", Storage="_EMPLOYEEs", ThisKey="SUP_ADD", OtherKey="EMP_STORE")]
 		public EntitySet<EMPLOYEE> EMPLOYEEs
 		{
 			get
@@ -2442,6 +2256,418 @@ namespace Pharmacy
 		{
 			this.SendPropertyChanging();
 			entity.SUPPLIER = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ACCOUNT")]
+	public partial class ACCOUNT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ID;
+		
+		private string _USERNAME;
+		
+		private System.Data.Linq.Binary _PASSWORD;
+		
+		private string _RANDOMKEY;
+		
+		private string _OTP;
+		
+		private System.Nullable<System.DateTime> _OTPDATESEND;
+		
+		private System.Nullable<System.DateTime> _DATECRATED;
+		
+		private System.Nullable<bool> _ACTIVE;
+		
+		private string _EMAIL;
+		
+		private string _LEVEL;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(string value);
+    partial void OnIDChanged();
+    partial void OnUSERNAMEChanging(string value);
+    partial void OnUSERNAMEChanged();
+    partial void OnPASSWORDChanging(System.Data.Linq.Binary value);
+    partial void OnPASSWORDChanged();
+    partial void OnRANDOMKEYChanging(string value);
+    partial void OnRANDOMKEYChanged();
+    partial void OnOTPChanging(string value);
+    partial void OnOTPChanged();
+    partial void OnOTPDATESENDChanging(System.Nullable<System.DateTime> value);
+    partial void OnOTPDATESENDChanged();
+    partial void OnDATECRATEDChanging(System.Nullable<System.DateTime> value);
+    partial void OnDATECRATEDChanged();
+    partial void OnACTIVEChanging(System.Nullable<bool> value);
+    partial void OnACTIVEChanged();
+    partial void OnEMAILChanging(string value);
+    partial void OnEMAILChanged();
+    partial void OnLEVELChanging(string value);
+    partial void OnLEVELChanged();
+    #endregion
+		
+		public ACCOUNT()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(50)")]
+		public string USERNAME
+		{
+			get
+			{
+				return this._USERNAME;
+			}
+			set
+			{
+				if ((this._USERNAME != value))
+				{
+					this.OnUSERNAMEChanging(value);
+					this.SendPropertyChanging();
+					this._USERNAME = value;
+					this.SendPropertyChanged("USERNAME");
+					this.OnUSERNAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary PASSWORD
+		{
+			get
+			{
+				return this._PASSWORD;
+			}
+			set
+			{
+				if ((this._PASSWORD != value))
+				{
+					this.OnPASSWORDChanging(value);
+					this.SendPropertyChanging();
+					this._PASSWORD = value;
+					this.SendPropertyChanged("PASSWORD");
+					this.OnPASSWORDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RANDOMKEY", DbType="VarChar(50)")]
+		public string RANDOMKEY
+		{
+			get
+			{
+				return this._RANDOMKEY;
+			}
+			set
+			{
+				if ((this._RANDOMKEY != value))
+				{
+					this.OnRANDOMKEYChanging(value);
+					this.SendPropertyChanging();
+					this._RANDOMKEY = value;
+					this.SendPropertyChanged("RANDOMKEY");
+					this.OnRANDOMKEYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OTP", DbType="VarChar(50)")]
+		public string OTP
+		{
+			get
+			{
+				return this._OTP;
+			}
+			set
+			{
+				if ((this._OTP != value))
+				{
+					this.OnOTPChanging(value);
+					this.SendPropertyChanging();
+					this._OTP = value;
+					this.SendPropertyChanged("OTP");
+					this.OnOTPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OTPDATESEND", DbType="DateTime")]
+		public System.Nullable<System.DateTime> OTPDATESEND
+		{
+			get
+			{
+				return this._OTPDATESEND;
+			}
+			set
+			{
+				if ((this._OTPDATESEND != value))
+				{
+					this.OnOTPDATESENDChanging(value);
+					this.SendPropertyChanging();
+					this._OTPDATESEND = value;
+					this.SendPropertyChanged("OTPDATESEND");
+					this.OnOTPDATESENDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DATECRATED", DbType="Date")]
+		public System.Nullable<System.DateTime> DATECRATED
+		{
+			get
+			{
+				return this._DATECRATED;
+			}
+			set
+			{
+				if ((this._DATECRATED != value))
+				{
+					this.OnDATECRATEDChanging(value);
+					this.SendPropertyChanging();
+					this._DATECRATED = value;
+					this.SendPropertyChanged("DATECRATED");
+					this.OnDATECRATEDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACTIVE", DbType="Bit")]
+		public System.Nullable<bool> ACTIVE
+		{
+			get
+			{
+				return this._ACTIVE;
+			}
+			set
+			{
+				if ((this._ACTIVE != value))
+				{
+					this.OnACTIVEChanging(value);
+					this.SendPropertyChanging();
+					this._ACTIVE = value;
+					this.SendPropertyChanged("ACTIVE");
+					this.OnACTIVEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(50)")]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this.OnEMAILChanging(value);
+					this.SendPropertyChanging();
+					this._EMAIL = value;
+					this.SendPropertyChanged("EMAIL");
+					this.OnEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[LEVEL]", Storage="_LEVEL", DbType="VarChar(10)")]
+		public string LEVEL
+		{
+			get
+			{
+				return this._LEVEL;
+			}
+			set
+			{
+				if ((this._LEVEL != value))
+				{
+					this.OnLEVELChanging(value);
+					this.SendPropertyChanging();
+					this._LEVEL = value;
+					this.SendPropertyChanged("LEVEL");
+					this.OnLEVELChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BILL")]
+	public partial class BILL : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _B_MED_NAME;
+		
+		private System.Nullable<int> _B_MED_QTY;
+		
+		private System.Nullable<decimal> _B_MED_PRICE;
+		
+		private System.Nullable<decimal> _B_MED_TOTAL;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnB_MED_NAMEChanging(string value);
+    partial void OnB_MED_NAMEChanged();
+    partial void OnB_MED_QTYChanging(System.Nullable<int> value);
+    partial void OnB_MED_QTYChanged();
+    partial void OnB_MED_PRICEChanging(System.Nullable<decimal> value);
+    partial void OnB_MED_PRICEChanged();
+    partial void OnB_MED_TOTALChanging(System.Nullable<decimal> value);
+    partial void OnB_MED_TOTALChanged();
+    #endregion
+		
+		public BILL()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B_MED_NAME", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string B_MED_NAME
+		{
+			get
+			{
+				return this._B_MED_NAME;
+			}
+			set
+			{
+				if ((this._B_MED_NAME != value))
+				{
+					this.OnB_MED_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._B_MED_NAME = value;
+					this.SendPropertyChanged("B_MED_NAME");
+					this.OnB_MED_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B_MED_QTY", DbType="Int")]
+		public System.Nullable<int> B_MED_QTY
+		{
+			get
+			{
+				return this._B_MED_QTY;
+			}
+			set
+			{
+				if ((this._B_MED_QTY != value))
+				{
+					this.OnB_MED_QTYChanging(value);
+					this.SendPropertyChanging();
+					this._B_MED_QTY = value;
+					this.SendPropertyChanged("B_MED_QTY");
+					this.OnB_MED_QTYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B_MED_PRICE", DbType="Decimal(13,4)")]
+		public System.Nullable<decimal> B_MED_PRICE
+		{
+			get
+			{
+				return this._B_MED_PRICE;
+			}
+			set
+			{
+				if ((this._B_MED_PRICE != value))
+				{
+					this.OnB_MED_PRICEChanging(value);
+					this.SendPropertyChanging();
+					this._B_MED_PRICE = value;
+					this.SendPropertyChanged("B_MED_PRICE");
+					this.OnB_MED_PRICEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_B_MED_TOTAL", DbType="Decimal(13,4)")]
+		public System.Nullable<decimal> B_MED_TOTAL
+		{
+			get
+			{
+				return this._B_MED_TOTAL;
+			}
+			set
+			{
+				if ((this._B_MED_TOTAL != value))
+				{
+					this.OnB_MED_TOTALChanging(value);
+					this.SendPropertyChanging();
+					this._B_MED_TOTAL = value;
+					this.SendPropertyChanged("B_MED_TOTAL");
+					this.OnB_MED_TOTALChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

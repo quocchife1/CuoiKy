@@ -33,5 +33,38 @@ namespace Pharmacy.Properties {
                 return ((string)(this["PHARMACYConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PHARMACY;Integrated Security=T" +
+            "rue;Encrypt=True")]
+        public string PHARMACYConnectionString1 {
+            get {
+                return ((string)(this["PHARMACYConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PHARMACY;Integrated Security=T" +
+            "rue;TrustServerCertificate=True")]
+        public string PHARMACYConnectionString2 {
+            get {
+                return ((string)(this["PHARMACYConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=PHARMACY;Integrated Security=T" +
+            "rue;Encrypt=True;TrustServerCertificate=True")]
+        public string PHARMACYConnectionString3 {
+            get {
+                return ((string)(this["PHARMACYConnectionString3"]));
+            }
+        }
     }
 }

@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PHARMACY" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PHARMACY;Integrated Security=True" SettingsObjectName="Pharmacy.Properties.Settings" SettingsPropertyName="PHARMACYConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.ADMIN" Member="ADMINs">
-    <Type Name="ADMIN">
-      <Column Name="A_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="A_USERNAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="A_PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="EMPLOYEE_ADMIN" Member="EMPLOYEE" ThisKey="A_ID" OtherKey="EMP_ID" Type="EMPLOYEE" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=PHARMACY;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="Pharmacy.Properties.Settings" SettingsPropertyName="PHARMACYConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
     <Type Name="CUSTOMER">
       <Column Name="C_ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -17,14 +9,6 @@
       <Column Name="C_PHONE" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Column Name="C_MAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="CUSTOMER_SALE" Member="SALEs" ThisKey="C_ID" OtherKey="C_ID" Type="SALE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.EMPACCOUNT" Member="EMPACCOUNTs">
-    <Type Name="EMPACCOUNT">
-      <Column Name="EMPAC_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="EMPAC_USERNAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="EMPAC_PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="EMPLOYEE_EMPACCOUNT" Member="EMPLOYEE" ThisKey="EMPAC_ID" OtherKey="EMP_ID" Type="EMPLOYEE" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.EMPLOYEE" Member="EMPLOYEEs">
@@ -37,17 +21,27 @@
       <Column Name="EMP_JOB_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="EMP_PHONE" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Column Name="EMP_MAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="SUP_ADD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="EMPLOYEE_ADMIN" Member="ADMINs" ThisKey="EMP_ID" OtherKey="A_ID" Type="ADMIN" />
-      <Association Name="EMPLOYEE_EMPACCOUNT" Member="EMPACCOUNTs" ThisKey="EMP_ID" OtherKey="EMPAC_ID" Type="EMPACCOUNT" />
+      <Column Name="EMP_STORE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="EMPLOYEE_SALE" Member="SALEs" ThisKey="EMP_ID" OtherKey="EMP_ID" Type="SALE" />
-      <Association Name="SUPPLIER_EMPLOYEE" Member="SUPPLIER" ThisKey="SUP_ADD" OtherKey="SUP_ADD" Type="SUPPLIER" IsForeignKey="true" />
+      <Association Name="SUPPLIER_EMPLOYEE" Member="SUPPLIER" ThisKey="EMP_STORE" OtherKey="SUP_ADD" Type="SUPPLIER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MED_REQ" Member="MED_REQs">
+    <Type Name="MED_REQ">
+      <Column Name="MED_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MED_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MED_QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MED_UNIT" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MED_REQ_P" Type="System.Decimal" DbType="Decimal(11,4) NOT NULL" CanBeNull="false" />
+      <Column Name="SUP_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="MED_REQ_D" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MED_REQ_STATUS" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.MEDICINES" Member="MEDICINEs">
     <Type Name="MEDICINE">
-      <Column Name="MED_BARCODE" Type="System.Decimal" DbType="Decimal(13,0) NOT NULL" CanBeNull="false" />
-      <Column Name="MED_ID" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MED_BARCODE" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="MED_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MED_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="MED_QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MED_UNIT" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
@@ -55,20 +49,19 @@
       <Column Name="MED_PRICE" Type="System.Decimal" DbType="Decimal(13,4) NOT NULL" CanBeNull="false" />
       <Column Name="MED_STATUS" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Association Name="MEDICINE_PURCHASE" Member="PURCHASEs" ThisKey="MED_ID" OtherKey="MED_ID" Type="PURCHASE" />
-      <Association Name="MEDICINE_SALES_ITEM" Member="SALES_ITEMs" ThisKey="MED_ID" OtherKey="MED_ID" Type="SALES_ITEM" />
     </Type>
   </Table>
   <Table Name="dbo.PURCHASE" Member="PURCHASEs">
     <Type Name="PURCHASE">
-      <Column Name="P_ID" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="P_ID" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SUP_ID" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
-      <Column Name="MED_ID" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MED_ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="P_QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="P_UNIT" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="P_COST" Type="System.Decimal" DbType="Decimal(11,4) NOT NULL" CanBeNull="false" />
       <Column Name="PUR_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="MFG_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="EXP_DATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MFG_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EXP_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="P_STATUS" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Association Name="MEDICINE_PURCHASE" Member="MEDICINE" ThisKey="MED_ID" OtherKey="MED_ID" Type="MEDICINE" IsForeignKey="true" />
       <Association Name="SUPPLIER_PURCHASE" Member="SUPPLIER" ThisKey="SUP_ID" OtherKey="SUP_ID" Type="SUPPLIER" IsForeignKey="true" />
@@ -90,12 +83,11 @@
   <Table Name="dbo.SALES_ITEMS" Member="SALES_ITEMs">
     <Type Name="SALES_ITEM">
       <Column Name="S_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MED_ID" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MED_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ST_QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ST_UNIT" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="TOTAL_PRICE" Type="System.Decimal" DbType="Decimal(20,2) NOT NULL" CanBeNull="false" />
       <Association Name="SALE_SALES_ITEM" Member="SALE" ThisKey="S_ID" OtherKey="S_ID" Type="SALE" IsForeignKey="true" />
-      <Association Name="MEDICINE_SALES_ITEM" Member="MEDICINE" ThisKey="MED_ID" OtherKey="MED_ID" Type="MEDICINE" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SUPPLIERS" Member="SUPPLIERs">
@@ -105,8 +97,30 @@
       <Column Name="SUP_ADD" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="SUP_PHONE" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Column Name="SUP_MAIL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="SUPPLIER_EMPLOYEE" Member="EMPLOYEEs" ThisKey="SUP_ADD" OtherKey="SUP_ADD" Type="EMPLOYEE" />
+      <Association Name="SUPPLIER_EMPLOYEE" Member="EMPLOYEEs" ThisKey="SUP_ADD" OtherKey="EMP_STORE" Type="EMPLOYEE" />
       <Association Name="SUPPLIER_PURCHASE" Member="PURCHASEs" ThisKey="SUP_ID" OtherKey="SUP_ID" Type="PURCHASE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACCOUNT" Member="ACCOUNTs">
+    <Type Name="ACCOUNT">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RANDOMKEY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OTP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OTPDATESEND" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DATECRATED" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ACTIVE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[LEVEL]" Member="LEVEL" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BILL" Member="BILLs">
+    <Type Name="BILL">
+      <Column Name="B_MED_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="B_MED_QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="B_MED_PRICE" Type="System.Decimal" DbType="Decimal(13,4)" CanBeNull="true" />
+      <Column Name="B_MED_TOTAL" Type="System.Decimal" DbType="Decimal(13,4)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
