@@ -222,6 +222,7 @@ namespace Pharmacy
 
             DataBaseDataContext data = new DataBaseDataContext();
             EMPLOYEE emp = data.EMPLOYEEs.Where(p => p.EMP_ID == id).SingleOrDefault();
+            ACCOUNT acc = data.ACCOUNTs.Where(p => p.ID == id).SingleOrDefault();
 
             if (emp == null)
             {
@@ -235,6 +236,7 @@ namespace Pharmacy
                 emp.EMP_NAME = name;
                 emp.EMP_SEX = sex;
                 emp.EMP_TYPE = type;
+                acc.LEVEL = type;
                 emp.EMP_PHONE = phone;
                 emp.EMP_MAIL = mail;
                 emp.EMP_STORE = store;

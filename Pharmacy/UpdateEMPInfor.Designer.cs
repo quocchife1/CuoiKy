@@ -91,7 +91,7 @@
             this.lblUpdateInfor.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
             this.lblUpdateInfor.Location = new System.Drawing.Point(287, 43);
             this.lblUpdateInfor.Name = "lblUpdateInfor";
-            this.lblUpdateInfor.Size = new System.Drawing.Size(274, 34);
+            this.lblUpdateInfor.Size = new System.Drawing.Size(348, 44);
             this.lblUpdateInfor.TabIndex = 4;
             this.lblUpdateInfor.Text = "Cập nhật thông tin";
             this.lblUpdateInfor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,7 +250,7 @@
             "Nữ"});
             this.txtSex.Location = new System.Drawing.Point(108, 134);
             this.txtSex.Name = "txtSex";
-            this.txtSex.Size = new System.Drawing.Size(148, 27);
+            this.txtSex.Size = new System.Drawing.Size(148, 32);
             this.txtSex.TabIndex = 11;
             // 
             // txtStore
@@ -267,7 +267,7 @@
             "Store 50"});
             this.txtStore.Location = new System.Drawing.Point(117, 428);
             this.txtStore.Name = "txtStore";
-            this.txtStore.Size = new System.Drawing.Size(136, 27);
+            this.txtStore.Size = new System.Drawing.Size(136, 32);
             this.txtStore.TabIndex = 10;
             // 
             // txtType
@@ -281,7 +281,7 @@
             "MANAGER"});
             this.txtType.Location = new System.Drawing.Point(105, 233);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(148, 27);
+            this.txtType.Size = new System.Drawing.Size(148, 32);
             this.txtType.TabIndex = 9;
             // 
             // line9
@@ -380,7 +380,7 @@
             this.lblStore.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStore.Location = new System.Drawing.Point(6, 431);
             this.lblStore.Name = "lblStore";
-            this.lblStore.Size = new System.Drawing.Size(108, 22);
+            this.lblStore.Size = new System.Drawing.Size(132, 29);
             this.lblStore.TabIndex = 0;
             this.lblStore.Text = "Cửa hàng:";
             // 
@@ -391,7 +391,7 @@
             this.txtMail.ForeColor = System.Drawing.Color.Black;
             this.txtMail.Location = new System.Drawing.Point(60, 386);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(196, 19);
+            this.txtMail.Size = new System.Drawing.Size(196, 23);
             this.txtMail.TabIndex = 7;
             // 
             // lblMail
@@ -400,7 +400,7 @@
             this.lblMail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMail.Location = new System.Drawing.Point(6, 383);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(55, 22);
+            this.lblMail.Size = new System.Drawing.Size(68, 29);
             this.lblMail.TabIndex = 0;
             this.lblMail.Text = "Mail:";
             // 
@@ -411,7 +411,7 @@
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
             this.txtPhone.Location = new System.Drawing.Point(67, 337);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(189, 19);
+            this.txtPhone.Size = new System.Drawing.Size(189, 23);
             this.txtPhone.TabIndex = 6;
             // 
             // lblPhone
@@ -420,7 +420,7 @@
             this.lblPhone.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(8, 334);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(55, 22);
+            this.lblPhone.Size = new System.Drawing.Size(65, 29);
             this.lblPhone.TabIndex = 0;
             this.lblPhone.Text = "SĐT:";
             // 
@@ -431,7 +431,7 @@
             this.txtJD.ForeColor = System.Drawing.Color.Black;
             this.txtJD.Location = new System.Drawing.Point(100, 289);
             this.txtJD.Name = "txtJD";
-            this.txtJD.Size = new System.Drawing.Size(156, 19);
+            this.txtJD.Size = new System.Drawing.Size(156, 23);
             this.txtJD.TabIndex = 5;
             // 
             // lblDJ
@@ -440,7 +440,7 @@
             this.lblDJ.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDJ.Location = new System.Drawing.Point(6, 279);
             this.lblDJ.Name = "lblDJ";
-            this.lblDJ.Size = new System.Drawing.Size(88, 22);
+            this.lblDJ.Size = new System.Drawing.Size(108, 29);
             this.lblDJ.TabIndex = 0;
             this.lblDJ.Text = "Bắt đầu:";
             // 
@@ -450,7 +450,7 @@
             this.lblType.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.Location = new System.Drawing.Point(6, 236);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(96, 22);
+            this.lblType.Size = new System.Drawing.Size(117, 29);
             this.lblType.TabIndex = 0;
             this.lblType.Text = "Chức vụ:";
             // 
@@ -461,7 +461,7 @@
             this.txtBD.ForeColor = System.Drawing.Color.Black;
             this.txtBD.Location = new System.Drawing.Point(114, 193);
             this.txtBD.Name = "txtBD";
-            this.txtBD.Size = new System.Drawing.Size(142, 19);
+            this.txtBD.Size = new System.Drawing.Size(142, 23);
             this.txtBD.TabIndex = 3;
             // 
             // lblBD
@@ -470,7 +470,7 @@
             this.lblBD.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBD.Location = new System.Drawing.Point(6, 188);
             this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(109, 22);
+            this.lblBD.Size = new System.Drawing.Size(135, 29);
             this.lblBD.TabIndex = 0;
             this.lblBD.Text = "Ngày sinh:";
             // 
@@ -480,7 +480,7 @@
             this.lblSex.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSex.Location = new System.Drawing.Point(6, 139);
             this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(96, 22);
+            this.lblSex.Size = new System.Drawing.Size(122, 29);
             this.lblSex.TabIndex = 0;
             this.lblSex.Text = "Giới tính:";
             // 
@@ -491,7 +491,7 @@
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(81, 93);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(175, 19);
+            this.txtName.Size = new System.Drawing.Size(175, 23);
             this.txtName.TabIndex = 1;
             // 
             // lblName
@@ -500,7 +500,7 @@
             this.lblName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(6, 90);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(76, 22);
+            this.lblName.Size = new System.Drawing.Size(95, 29);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Họ tên:";
             // 
@@ -511,7 +511,7 @@
             this.txtID.ForeColor = System.Drawing.Color.Black;
             this.txtID.Location = new System.Drawing.Point(38, 44);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(215, 19);
+            this.txtID.Size = new System.Drawing.Size(215, 23);
             this.txtID.TabIndex = 0;
             // 
             // lblID
@@ -520,7 +520,7 @@
             this.lblID.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(6, 41);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(36, 22);
+            this.lblID.Size = new System.Drawing.Size(44, 29);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID:";
             // 
@@ -587,6 +587,7 @@
             this.dgvUpdateInfor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUpdateInfor.Size = new System.Drawing.Size(549, 653);
             this.dgvUpdateInfor.TabIndex = 3;
+            this.dgvUpdateInfor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUpdateInfor_CellContentClick);
             // 
             // EMP_ID
             // 

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Github\\CuoiKy\\Pharmacy\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T00:48:46.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateEMPInfor.cs",
+              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
+              "RelativeDocumentMoniker": "UpdateEMPInfor.cs",
+              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
+              "RelativeToolTip": "UpdateEMPInfor.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAQwFIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T00:42:19.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateEMPInfor.cs [Design]",
+              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
+              "RelativeDocumentMoniker": "UpdateEMPInfor.cs",
+              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs [Design]",
+              "RelativeToolTip": "UpdateEMPInfor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T00:42:13.429Z"
             }
           ]
         }

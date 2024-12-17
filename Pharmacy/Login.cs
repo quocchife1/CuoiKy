@@ -52,7 +52,7 @@ namespace Pharmacy
                 ACCOUNT acc = data.ACCOUNTs.SingleOrDefault(p => p.USERNAME == userName);
                 if (acc != null)
                 {
-                    if(acc.ACTIVE == false)
+                    if (acc.ACTIVE == false)
                     {
                         MessageBox.Show("Tài khoản chưa xác thực. Vui lòng nhập OTP để xác thực.", "Thông báo");
                         XacThuc frm = new XacThuc(acc.USERNAME);
@@ -72,8 +72,8 @@ namespace Pharmacy
                         Login.GlobalLoggedInStore = emp.EMP_STORE;
                         if (acc.LEVEL == "ADMIN")
                         {
-                            
-                            
+
+
                             if (emp != null)
                             {
                                 string empID = emp.EMP_ID;
@@ -82,7 +82,7 @@ namespace Pharmacy
                                 Login.GlobalLoggedInUserName = empName;
                                 Login.GlobalLoggedInID = empID;
                                 Login.GlobalLoggedInStore = empStore;
-                                
+
                             }
                         }
                         else
@@ -97,7 +97,7 @@ namespace Pharmacy
                                     Login.GlobalLoggedInUserName = empName;
                                     Login.GlobalLoggedInID = empID;
                                     Login.GlobalLoggedInStore = empStore;
-                                    
+
                                 }
                             }
                             else if (acc.LEVEL == "PHARMACIST")
@@ -111,11 +111,11 @@ namespace Pharmacy
                                     Login.GlobalLoggedInUserName = empName;
                                     Login.GlobalLoggedInID = empID;
                                     Login.GlobalLoggedInStore = empStore;
-                                    
+
                                 }
                             }
-                            
-                            
+
+
                         }
                         MainForm ad = new MainForm();
                         ad.Show();
@@ -127,9 +127,12 @@ namespace Pharmacy
                         txtUsername.Focus();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Thông tin không tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                    txtUsername.Focus();
+                }
             }
-
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)

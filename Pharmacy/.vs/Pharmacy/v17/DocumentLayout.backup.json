@@ -3,112 +3,16 @@
   "WorkspaceRootPath": "D:\\Github\\CuoiKy\\Pharmacy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\xacthuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:xacthuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\xacthuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:xacthuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\sendmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:sendmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\introduce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:introduce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\reportbillprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:reportbillprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updatemed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updatemed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updatewarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updatewarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|d:\\github\\cuoiky\\pharmacy\\updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updateempinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updatewarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updatewarehouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\updatemed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:updatemed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\pharmacistlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:pharmacistlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|D:\\Github\\CuoiKy\\Pharmacy\\pharmacistlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66F4EB12-6C93-438F-B3DB-97FE96B673FD}|Pharmacy.csproj|solutionrelative:pharmacistlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,340 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T17:13:37.049Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
-              "RelativeDocumentMoniker": "Login.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
-              "RelativeToolTip": "Login.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAIAwwMgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T10:56:30.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ForgotPassword.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\ForgotPassword.cs",
-              "RelativeDocumentMoniker": "ForgotPassword.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\ForgotPassword.cs",
-              "RelativeToolTip": "ForgotPassword.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAqwDAAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:37:10.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
               "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs [Design]",
-              "RelativeToolTip": "Login.cs [Design]",
+              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAkwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T12:02:05.991Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ForgotPassword.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\ForgotPassword.cs",
-              "RelativeDocumentMoniker": "ForgotPassword.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\ForgotPassword.cs [Design]",
-              "RelativeToolTip": "ForgotPassword.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T14:34:30.628Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "XacThuc.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\XacThuc.cs",
-              "RelativeDocumentMoniker": "XacThuc.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\XacThuc.cs [Design]",
-              "RelativeToolTip": "XacThuc.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T16:33:02.638Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T00:48:46.715Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Signup.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Signup.cs",
-              "RelativeDocumentMoniker": "Signup.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Signup.cs [Design]",
-              "RelativeToolTip": "Signup.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:56:51.032Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Signup.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Signup.cs",
-              "RelativeDocumentMoniker": "Signup.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Signup.cs",
-              "RelativeToolTip": "Signup.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAIwEsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:56:52.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "XacThuc.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\XacThuc.cs",
-              "RelativeDocumentMoniker": "XacThuc.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\XacThuc.cs",
-              "RelativeToolTip": "XacThuc.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T16:39:55.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UpdateWareHouse.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateWareHouse.cs",
-              "RelativeDocumentMoniker": "UpdateWareHouse.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateWareHouse.cs",
-              "RelativeToolTip": "UpdateWareHouse.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwMgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:47:13.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Sale.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Sale.cs",
-              "RelativeDocumentMoniker": "Sale.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Sale.cs",
-              "RelativeToolTip": "Sale.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAQwKkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T06:28:00.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Sale.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Sale.cs",
-              "RelativeDocumentMoniker": "Sale.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Sale.cs [Design]",
-              "RelativeToolTip": "Sale.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T06:22:47.088Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T12:08:43.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SendMail.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\SendMail.cs",
-              "RelativeDocumentMoniker": "SendMail.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\SendMail.cs",
-              "RelativeToolTip": "SendMail.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:59:43.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "UpdateEMPInfor.cs",
               "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
               "RelativeDocumentMoniker": "UpdateEMPInfor.cs",
               "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
               "RelativeToolTip": "UpdateEMPInfor.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAAAwDUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkBAAAAAAAAAAAQwFIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:30:09.988Z"
+              "WhenOpened": "2024-12-17T00:42:19.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 2,
               "Title": "UpdateEMPInfor.cs [Design]",
               "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs",
               "RelativeDocumentMoniker": "UpdateEMPInfor.cs",
               "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateEMPInfor.cs [Design]",
               "RelativeToolTip": "UpdateEMPInfor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:30:12.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UpdateMED.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateMED.cs",
-              "RelativeDocumentMoniker": "UpdateMED.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateMED.cs",
-              "RelativeToolTip": "UpdateMED.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAmwL4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:17:41.905Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\MainForm.cs [Design]",
-              "RelativeToolTip": "MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T17:13:39.803Z",
+              "WhenOpened": "2024-12-17T00:42:13.429Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-12-16T13:36:43.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "reportBillPrinter.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\reportBillPrinter.cs",
-              "RelativeDocumentMoniker": "reportBillPrinter.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\reportBillPrinter.cs",
-              "RelativeToolTip": "reportBillPrinter.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAA5wCoAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T12:47:54.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Introduce.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Introduce.cs",
-              "RelativeDocumentMoniker": "Introduce.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Introduce.cs",
-              "RelativeToolTip": "Introduce.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wBkAAACYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T13:02:51.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Bill.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Bill.cs",
-              "RelativeDocumentMoniker": "Bill.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Bill.cs",
-              "RelativeToolTip": "Bill.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDgAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T12:49:18.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Bill.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\Bill.cs",
-              "RelativeDocumentMoniker": "Bill.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\Bill.cs [Design]",
-              "RelativeToolTip": "Bill.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T12:49:16.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UpdateWareHouse.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateWareHouse.cs",
-              "RelativeDocumentMoniker": "UpdateWareHouse.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateWareHouse.cs [Design]",
-              "RelativeToolTip": "UpdateWareHouse.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:47:16.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UpdateMED.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateMED.cs",
-              "RelativeDocumentMoniker": "UpdateMED.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\UpdateMED.cs [Design]",
-              "RelativeToolTip": "UpdateMED.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T05:18:07.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PharmacistList.cs [Design]",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\PharmacistList.cs",
-              "RelativeDocumentMoniker": "PharmacistList.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\PharmacistList.cs [Design]",
-              "RelativeToolTip": "PharmacistList.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T04:33:30.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "PharmacistList.cs",
-              "DocumentMoniker": "D:\\Github\\CuoiKy\\Pharmacy\\PharmacistList.cs",
-              "RelativeDocumentMoniker": "PharmacistList.cs",
-              "ToolTip": "D:\\Github\\CuoiKy\\Pharmacy\\PharmacistList.cs",
-              "RelativeToolTip": "PharmacistList.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T04:33:23.327Z"
             }
           ]
         }
